@@ -1,0 +1,65 @@
+h1 {
+    font-size: 2em;
+    border-left: 7px solid #42790e;
+    border-bottom: 1px solid #42790e;
+    padding-top: 3px;
+    padding-left: 5px;
+    padding-bottom: 3px;
+    color: #bbbbbb;
+}
+
+body {
+    width: 80%;
+    margin: auto;
+    padding-bottom: 20px;
+    font-size: 1em;
+    background-color: #000000;
+    color: #bbbbbb;
+}
+
+table {
+    box-shadow: 3px 3px 12px 3px #42790e;
+}
+
+caption {
+    text-shadow: 3px 3px 3px #42790e;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+td {
+    padding: 5px;
+    vertical-align: top;
+}
+
+a:link {
+    color: #0033AA;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000000;
+    background: #AAAAFF;
+}
+
+a:visited {
+    color: #AA3300;
+    text-decoration: none;
+}
+
+.items {
+    line-height: 1.6em;
+}
+
+#author {
+    text-align: right;
+}
+
+#intro {
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+#source {
+    font-size: 0.8em;
+}

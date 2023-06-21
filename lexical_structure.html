@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>Lexical structure</title>
+    <link rel="stylesheet" href="lexical_structure.css">
+</head>
+
+<body>
+    <h1>字句構造(Lexical structure)</h1>
+    <h2>重要語(Keywords)</h2>
+    <p>組み込み型(int), 制御構文(if, else, while, for), return</p>
+    <h2>識別子(Identifiers)</h2>
+    <p>variable, function and class name. 文頭は英字および下線(_)、文中は英数字と下線(_)が使える</p>
+    <h2>直値(Literals)</h2>
+    <p>integar</p>
+    <div>
+        <h2>句読点(Punctuation)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>記号(Symbol)</th>
+                    <th>名称(Name)</th>
+                    <th>用途(Usage)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>+</code></td>
+                    <td>Plus</td>
+                    <td>加算(Addition)</td>
+                </tr>
+                <tr>
+                    <td><code>-</code></td>
+                    <td>Minus</td>
+                    <td>減算(Subtraction)</td>
+                </tr>
+                <tr>
+                    <td><code>*</code></td>
+                    <td>Asterisk</td>
+                    <td>乗算(Multiplication), 参照(Dereference), ポインタ(Pointers)</td>
+                </tr>
+                <tr>
+                    <td><code>/</code></td>
+                    <td>Slash</td>
+                    <td>除算(Division)</td>
+                </tr>
+                <tr>
+                    <td><code>==</code></td>
+                    <td>EqualEqual</td>
+                    <td>等しい(Equal)</td>
+                </tr>
+                <tr>
+                    <td><code>!=</code></td>
+                    <td>NotEqual</td>
+                    <td>等しくない(Not Equal)</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;=</code></td>
+                    <td>LessThanOrEqualTo</td>
+                    <td>以下(Less than or equal to)</td>
+                </tr>
+                <tr>
+                    <td><code>&gt;=</code></td>
+                    <td>GreaterThanOrEqualTo</td>
+                    <td>以上(Greater than or equal to)</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;</code></td>
+                    <td>LessThan</td>
+                    <td>より小さい(Less than)</td>
+                </tr>
+                <tr>
+                    <td><code>&gt;</code></td>
+                    <td>GreaterThan</td>
+                    <td>より大きい(Greater than)</td>
+                </tr>
+                <tr>
+                    <td><code>=</code></td>
+                    <td>Equal</td>
+                    <td>代入(Assignment)</td>
+                </tr>
+                <tr>
+                    <td><code>;</code></td>
+                    <td>Semicolon</td>
+                    <td>文の終端(Terminator for statements)</td>
+                </tr>
+                <tr>
+                    <td><code>&</code></td>
+                    <td>Ampersand</td>
+                    <td>参照(Reference)</td>
+                </tr>
+                <tr>
+                    <td><code>()</code></td>
+                    <td>丸括弧(Parentheses)</td>
+                    <td>関数(Function)</td>
+                </tr>
+                <tr>
+                    <td><code>{}</code></td>
+                    <td>波括弧(Curly braces)</td>
+                    <td>Block</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2>構文(Syntax)</h2>
+    <div>
+        <p><em><code>function definition</code></em>:<br>
+            <em><code>type</code></em> <em><code>function_name</code></em> '(' some parameters separated by comma ')'
+            '{' some statements '}'
+        </p>
+    </div>
+    <p>type:<br>
+        type_name some '*'s</p>
+    <p>parameter:<br>
+        type parameter_name</p>
+    <p>statement:<br>
+        an expression ';'<br>
+        "return" an expression ';'<br>
+        type variable_name ';'<br>
+        "if" '(' an expression ')' a statement<br>
+        "if" '(' an expression ')' a statement "else" a statement<br>
+        "while" '(' an expression ')' a statement<br>
+        "for" '(' [an expression] ';' [an expression] ';' [an expression] ')' a statement<br>
+        '{' statements '}'</p>
+    <p>expression:<br>
+        an assignment</p>
+    <p>assignment:<br>
+        an equality ('=' an assignment)</p>
+    <p>equality:<br>
+        a relation ("==" a relation)<br>
+        a relation ("!=" a relation)</p>
+    <p>relation:<br>
+        an addtion ('>' an addtion)<br>
+        an addtion ('&lt;' an addtion)<br>
+        an addtion ('>=' an addtion)<br>
+        an addtion ('&lt;=' an addtion)</p>
+    <p>addtion:<br>
+        a multiplier ('+' a multiplier)<br>
+        a multiplier ('-' a multiplier)</p>
+    <p>multiplier:<br>
+        an unary ('*' an unary)<br>
+        an unary ('/' an unary)</p>
+    <p>unary:<br>
+        ('+' or '-') a primary<br>
+        ('*' or '&') an unary</p>
+    <p>primary:<br>
+        '(' an expression ')'<br>
+        function_name '(' a parameter, a parameter, ... ')'<br>
+        variable_name<br>
+        a literal</p>
+</body>
+
+</html>
