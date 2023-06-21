@@ -3,20 +3,24 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Lexical structure</title>
+    <title>字句構造(Lexical structure)</title>
     <link rel="stylesheet" href="lexical_structure.css">
 </head>
 
 <body>
     <h1>字句構造(Lexical structure)</h1>
+    <p>&copy;は未実装の機能</p>
+
     <h2>重要語(Keywords)</h2>
-    <p>組み込み型(int), 制御構文(if, else, while, for), return</p>
-    <h2>識別子(Identifiers)</h2>
-    <p>variable, function and class name. 文頭は英字および下線(_)、文中は英数字と下線(_)が使える</p>
-    <h2>直値(Literals)</h2>
-    <p>integar</p>
+    <h3>実用語(Used keywords)</h3>
+    <p>組み込み型(int, char&copy;, float&copy;, double&copy;, bool&copy;)</p>
+    <p>制御構文(if, else, while, for, break&copy;, continue&copy;)</p>
+    <p>return</p>
+    <h3>予約語(Reserved keywords)</h3>
+    <p>なし</p>
+
     <div>
-        <h2>句読点(Punctuation)</h2>
+        <h2>構文記号(Punctuation)</h2>
         <table>
             <thead>
                 <tr>
@@ -105,6 +109,14 @@
         </table>
     </div>
 
+    <h2>直値(Literals)</h2>
+    <p>整数(integar), 配列(array)&copy;, 文字(character)&copy;, 文字列(string)&copy;, 浮動点小数(float)&copy;,
+        論理値(logical)&copy;</p>
+
+    <h2>識別子(Identifiers)</h2>
+    <p>変数名、関数名、クラス名&copy;(variable, function and class&copy; name)。 文頭は英字および下線(_)、文中は英数字と下線(_)が使える。
+        ただし、重要語を識別子に使うことはできない。</p>
+
     <h2>構文(Syntax)</h2>
     <div>
         <p><em><code>function definition</code></em>:<br>
@@ -116,7 +128,7 @@
         type_name some '*'s</p>
     <p>parameter:<br>
         type parameter_name</p>
-    <p>statement:<br>
+    <p>文(statement):<br>
         an expression ';'<br>
         "return" an expression ';'<br>
         type variable_name ';'<br>
@@ -125,28 +137,30 @@
         "while" '(' an expression ')' a statement<br>
         "for" '(' [an expression] ';' [an expression] ';' [an expression] ')' a statement<br>
         '{' statements '}'</p>
-    <p>expression:<br>
+    <p>式(expression):<br>
         an assignment</p>
-    <p>assignment:<br>
+    <p>代入(assignment):<br>
         an equality ('=' an assignment)</p>
-    <p>equality:<br>
+    <p>論理式logical expression(logic):<br>
+        未実装</p>
+    <p>比較式comparison expression(equality):<br>
         a relation ("==" a relation)<br>
         a relation ("!=" a relation)</p>
-    <p>relation:<br>
-        an addtion ('>' an addtion)<br>
+    <p>関係式(relation):<br>
+        an addtion ('&gt;' an addtion)<br>
         an addtion ('&lt;' an addtion)<br>
-        an addtion ('>=' an addtion)<br>
+        an addtion ('&gt;=' an addtion)<br>
         an addtion ('&lt;=' an addtion)</p>
-    <p>addtion:<br>
+    <p>代数式algebraic expression(addtion):<br>
         a multiplier ('+' a multiplier)<br>
         a multiplier ('-' a multiplier)</p>
-    <p>multiplier:<br>
+    <p>項term(multiplier):<br>
         an unary ('*' an unary)<br>
         an unary ('/' an unary)</p>
-    <p>unary:<br>
+    <p>因子factor(unary):<br>
         ('+' or '-') a primary<br>
-        ('*' or '&') an unary</p>
-    <p>primary:<br>
+        ('*' or '&amp;') an unary</p>
+    <p>基本要素(primary):<br>
         '(' an expression ')'<br>
         function_name '(' a parameter, a parameter, ... ')'<br>
         variable_name<br>
