@@ -2,356 +2,415 @@
 <html lang="ja">
 
 <head>
-    <meta charset="utf-8">
-    <title>字句構造(Lexical structure)</title>
-    <link rel="stylesheet" href="lexical_structure.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>字句構造(Lexical structure)</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="lexical_structure.css">
 </head>
 
 <body>
-    <h1>字句構造(Lexical structure)</h1>
-    <p>&copy;は未実装の機能</p>
+  <header>
+    <h1><ruby>字句構造<rp>(</rp>
+        <rt>Lexical structure</rt>
+        <rp>)</rp>
+      </ruby></h1>
+    <div class="hamburger-menu">
+      <input type="checkbox" id="menu-btn-check">
+      <label for="menu-btn-check" class="menu-btn"><span></span></label>
+      <!--ここからメニュー-->
+      <div class="menu-content">
+        <ul>
+          <li>
+            <a href="index.html">ホーム</a>
+          </li>
+          <li>
+            <a href="lexical_structure.html">字句構造</a>
+          </li>
+          <li>
+            <a href="#">メニューリンク3</a>
+          </li>
+        </ul>
+      </div>
+      <!--ここまでメニュー-->
+    </div>
+  </header>
 
-    <section>
-        <h2>重要語(Keywords)</h2>
-        <div>
-            <h3>実用語(Used keywords)</h3>
-            <ul>
-                <li>組み込み型(int, char<sub>&copy;</sub>, float<sub>&copy;</sub>, double<sub>&copy;</sub>,
-                    bool<sub>&copy;</sub>)
-                </li>
-                <li>制御構文(if, else, while, for, break<sub>&copy;</sub>, continue<sub>&copy;</sub>)</li>
-                <li>return</li>
-            </ul>
-        </div>
-        <div>
-            <h3>予約語(Reserved keywords)</h3>
-            <ul>
-                <li>なし</li>
-            </ul>
-        </div>
-    </section>
+  <p>&copy;は未実装の機能</p>
 
-    <section>
-        <div>
-            <h2>構文記号(Punctuation)</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>記号(Symbol)</th>
-                        <th>名称(Name)</th>
-                        <th>用途(Usage)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><code>+</code></td>
-                        <td>Plus</td>
-                        <td>加算(Addition)</td>
-                    </tr>
-                    <tr>
-                        <td><code>-</code></td>
-                        <td>Minus</td>
-                        <td>減算(Subtraction)</td>
-                    </tr>
-                    <tr>
-                        <td><code>*</code></td>
-                        <td>Asterisk</td>
-                        <td>乗算(Multiplication), 参照(Dereference), ポインタ(Pointers)</td>
-                    </tr>
-                    <tr>
-                        <td><code>/</code></td>
-                        <td>Slash</td>
-                        <td>除算(Division)</td>
-                    </tr>
-                    <tr>
-                        <td><code>==</code></td>
-                        <td>EqualEqual</td>
-                        <td>等しい(Equal)</td>
-                    </tr>
-                    <tr>
-                        <td><code>!=</code></td>
-                        <td>NotEqual</td>
-                        <td>等しくない(Not Equal)</td>
-                    </tr>
-                    <tr>
-                        <td><code>&lt;=</code></td>
-                        <td>LessThanOrEqualTo</td>
-                        <td>以下(Less than or equal to)</td>
-                    </tr>
-                    <tr>
-                        <td><code>&gt;=</code></td>
-                        <td>GreaterThanOrEqualTo</td>
-                        <td>以上(Greater than or equal to)</td>
-                    </tr>
-                    <tr>
-                        <td><code>&lt;</code></td>
-                        <td>LessThan</td>
-                        <td>より小さい(Less than)</td>
-                    </tr>
-                    <tr>
-                        <td><code>&gt;</code></td>
-                        <td>GreaterThan</td>
-                        <td>より大きい(Greater than)</td>
-                    </tr>
-                    <tr>
-                        <td><code>=</code></td>
-                        <td>Equal</td>
-                        <td>代入(Assignment)</td>
-                    </tr>
-                    <tr>
-                        <td><code>;</code></td>
-                        <td>Semicolon</td>
-                        <td>文の終端(Terminator for statements)</td>
-                    </tr>
-                    <tr>
-                        <td><code>&amp;</code></td>
-                        <td>Ampersand</td>
-                        <td>参照(Reference)</td>
-                    </tr>
-                    <tr>
-                        <td><code>()</code></td>
-                        <td>丸括弧(Parentheses)</td>
-                        <td>関数(Function)</td>
-                    </tr>
-                    <tr>
-                        <td><code>{}</code></td>
-                        <td>波括弧(Curly braces)</td>
-                        <td>Block</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
+  <section>
+    <h2><ruby>重要語<rp>(</rp>
+        <rt>Keywords</rt>
+        <rp>)</rp>
+      </ruby></h2>
+    <div>
+      <h3><ruby>既定語<rp>(</rp>
+          <rt>Preset</rt>
+          <rp>)</rp>
+        </ruby></h3>
+      <ul>
+        <li>組み込み型(int, char<sub>&copy;</sub>, float<sub>&copy;</sub>, double<sub>&copy;</sub>,
+          bool<sub>&copy;</sub>)
+        </li>
+        <li>制御構文(if, else, while, for, break<sub>&copy;</sub>, continue<sub>&copy;</sub>)</li>
+        <li>return</li>
+      </ul>
+    </div>
+    <div>
+      <h3><ruby>予約語<rp>(</rp>
+          <rt>Reserved</rt>
+          <rp>)</rp>
+        </ruby></h3>
+      <ul>
+        <li>なし</li>
+      </ul>
+    </div>
+  </section>
 
-    <section>
-        <h2>直値(Literals)</h2>
-        <p>整数(integer), 配列(array)<sub>&copy;</sub>, 文字(character)<sub>&copy;</sub>,
-            文字列(string)<sub>&copy;</sub>, 浮動点小数(float)<sub>&copy;</sub>,
-            論理値(logical)<sub>&copy;</sub></p>
-    </section>
+  <section>
+    <h2><ruby>構文記号<rp>(</rp>
+        <rt>Punctuation</rt>
+        <rp>)</rp>
+      </ruby></h2>
+    <div class="table-wrap">
+      <table class="table">
+        <thead>
+          <tr>
+            <th><ruby>記号<rp>(</rp>
+                <rt>Symbol</rt>
+                <rp>)</rp>
+              </ruby></th>
+            <th><ruby>名称<rp>(</rp>
+                <rt>Name</rt>
+                <rp>)</rp>
+              </ruby></th>
+            <th><ruby>用途<rp>(</rp>
+                <rt>Usage</rt>
+                <rp>)</rp>
+              </ruby></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>+</code></td>
+            <td>Plus</td>
+            <td>加算(Addition)</td>
+          </tr>
+          <tr>
+            <td><code>-</code></td>
+            <td>Minus</td>
+            <td>減算(Subtraction)</td>
+          </tr>
+          <tr>
+            <td><code>*</code></td>
+            <td>Asterisk</td>
+            <td>乗算(Multiplication), 参照(Dereference), ポインタ(Pointers)</td>
+          </tr>
+          <tr>
+            <td><code>/</code></td>
+            <td>Slash</td>
+            <td>除算(Division)</td>
+          </tr>
+          <tr>
+            <td><code>==</code></td>
+            <td>EqualEqual</td>
+            <td>等しい(Equal)</td>
+          </tr>
+          <tr>
+            <td><code>!=</code></td>
+            <td>NotEqual</td>
+            <td>等しくない(Not Equal)</td>
+          </tr>
+          <tr>
+            <td><code>&lt;=</code></td>
+            <td>Less Than Or Equal To</td>
+            <td>以下(Less than or equal to)</td>
+          </tr>
+          <tr>
+            <td><code>&gt;=</code></td>
+            <td>Greater Than Or Equal To</td>
+            <td>以上(Greater than or equal to)</td>
+          </tr>
+          <tr>
+            <td><code>&lt;</code></td>
+            <td>Less Than</td>
+            <td>より小さい(Less than)</td>
+          </tr>
+          <tr>
+            <td><code>&gt;</code></td>
+            <td>Greater Than</td>
+            <td>より大きい(Greater than)</td>
+          </tr>
+          <tr>
+            <td><code>=</code></td>
+            <td>Equal</td>
+            <td>代入(Assignment)</td>
+          </tr>
+          <tr>
+            <td><code>;</code></td>
+            <td>Semicolon</td>
+            <td>文の終端(Terminator for statements)</td>
+          </tr>
+          <tr>
+            <td><code>&amp;</code></td>
+            <td>Ampersand</td>
+            <td>参照(Reference)</td>
+          </tr>
+          <tr>
+            <td><code>()</code></td>
+            <td>丸括弧(Parentheses)</td>
+            <td>関数(Function)</td>
+          </tr>
+          <tr>
+            <td><code>{}</code></td>
+            <td>波括弧(Curly braces)</td>
+            <td>Block</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 
-    <section>
-        <h2>識別子(Identifiers)</h2>
-        <p>変数名、関数名、クラス名<sub>&copy;</sub>(variable, function and class<sub>&copy;</sub> name)。
-            文頭は英字および下線(_)、文中は英数字と下線(_)が使える。
-            ただし、重要語を識別子に使うことはできない。</p>
-    </section>
+  <section>
+    <h2><ruby>直値<rp>(</rp>
+        <rt>Literals</rt>
+        <rp>)</rp>
+      </ruby></h2>
+    <p>整数(integer), 配列(array)<sub>&copy;</sub>, 文字(character)<sub>&copy;</sub>,
+      文字列(string)<sub>&copy;</sub>, 浮動点小数(float)<sub>&copy;</sub>,
+      論理値(logical)<sub>&copy;</sub></p>
+  </section>
 
-    <section>
-        <h2>構文(Syntax)</h2>
-        <div>
-            <h3>構文記述文法</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>文法</th>
-                        <th>書式</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>終端記号</td>
-                        <td><b>character</b></td>
-                    </tr>
-                    <tr>
-                        <td>非終端記号</td>
-                        <td>variable-name</td>
-                    </tr>
-                    <tr>
-                        <td>並び</td>
-                        <td>expression1, expression2</td>
-                    </tr>
-                    <tr>
-                        <td>選択</td>
-                        <td>expression1 | expression2</td>
-                    </tr>
-                    <tr>
-                        <td>0個以上</td>
-                        <td>expression*</td>
-                    </tr>
-                    <tr>
-                        <td>1個以上</td>
-                        <td>expression+</td>
-                    </tr>
-                    <tr>
-                        <td>省略可能</td>
-                        <td>[expression]</td>
-                    </tr>
-                    <tr>
-                        <td>グループ化</td>
-                        <td>(expression1 expression2)</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div>
-            <h3>変数宣言</h3>
-            <dl>
-                <dt>変数宣言(variable-declaration):</dt>
-                <dd>
-                    <span>変数宣言指定子</span><span>(variable-declaration-specifier)</span>,
-                    <span>変数宣言子</span><span>(variable-declarator)</span>
-                </dd>
-            </dl>
-            <dl>
-                <dt><span>変数宣言指定子</span><span>(variable-declaration-specifier)</span>:</dt>
-                <dd>
-                    <span>[<span>記憶領域指定子</span><span>(storage-class-specifier)</span>]<sub>&copy;</sub></span>,
-                    <span>[<span>型修飾子</span><span>(type-qualifier)</span>]<sub>&copy;</sub></span>,
-                    <span>型指定子</span><span>(type-specifier)</span>
-                </dd>
-            </dl>
-            <details>
-                <summary><span>変数宣言子</span><span>(variable-declarator)</span></summary>
-                <span>[<span>ポインタ・参照指定子</span><span>(pointer/reference-specifier)</span>]</span>,
-                <span>[<span>ポインタ・参照修飾子</span><span>(pointer/reference-qualifier)</span>]<sub>&copy;</sub></span>,
-                <span><span>識別子</span><span>(identifier)</span></span>,
-                <span>[<span>初期化子</span><span>(initializer)</span>]<sub>&copy;</sub></span>
-            </details>
-        </div>
-        <div>
-            <h3>関数宣言</h3>
-            <dl>
-                <dt><span>関数宣言</span><span>(function-declaration)</span>:</dt>
-                <dd>
-                    <span>関数宣言指定子</span><span>(function-declaration-specifier)</span>,
-                    <span>関数宣言子</span><span>(function-declarator)</span>
-                </dd>
-            </dl>
-            <dl>
-                <dt><span>関数宣言指定子</span><span>(function-declaration-specifier)</span>:</dt>
-                <dd>
-                    <span>[<span>フレンド指定子</span><span>(friend-specifier)</span>]<sub>&copy;</sub></span>,
-                    <span>[<span>記憶領域指定子</span><span>(storage-class-specifier)</span>]<sub>&copy;</sub></span>,
-                    <span>[<span>関数指定子</span><span>(function-specifier)</span>]<sub>&copy;</sub></span>,
-                    <span>[<span>[<span>戻り値型修飾子</span><span>(return-type-qualifier)</span>]<sub>&copy;</sub></span>,
-                        <span>戻り値型指定子</span><span>(return-type-qualifier)</span>]</span>
-                </dd>
-            </dl>
-            <details>
-                <summary><span>関数宣言子</span><span>(function-declarator)</span></summary>
-                <span>[<span>ポインタ・参照指定子</span><span>(pointer/reference-specifier)</span>]</span>,
-                <span><span>識別子</span><span>(identifier)</span></span>,
-                <b>(</b>,
-                <span>[<span>引数列</span><span>(argument-list)</span>]</span>,
-                <b>)</b>,
-                <span>[<span>関数修飾子</span><span>(function-qualifier)</span>]<sub>&copy;</sub></span>,
-                <span>[<span>例外指定</span><span>(exception-specification)</span>]<sub>&copy;</sub></span>
-            </details>
-        </div>
-        <div>
-            <h3>関数定義</h3>
-            <dl>
-                <dt><span>関数定義</span><span>(function-definition)</span>:</dt>
-                <dd>
-                    <span>関数宣言指定子</span><span>(function-declaration-specifier)</span>,
-                    <span>関数宣言子</span><span>(function-declarator)</span>,
-                    <b>{</b>,
-                    <span>関数本体</span><span>(function-body)</span>,
-                    <b>}</b>
-                </dd>
-            </dl>
-            <dl>
-                <dt><span>関数本体</span><span>(function-body)</span>:</dt>
-                <dd>
-                    <span>statement</span>*
-                </dd>
-            </dl>
-        </div>
-        <dl>
-            <dt><span>型指定子</span><span>(type-specifier)</span>:</dt>
-            <dd>
-                <b>int</b> | <b>char</b><sub>&copy;</sub> | <b>float</b><sub>&copy;</sub> |
-                <b>double</b><sub>&copy;</sub> | <b>bool</b><sub>&copy;</sub> |
-                <span>自定義クラス名</span><span>(user-define-class-name)</span>
-            </dd>
-        </dl>
-        <dl>
-            <dt><span>ポインタ指定子</span><span>(pointer-specifier)</span>:</dt>
-            <dd>
-                <b>*</b>
-            </dd>
-        </dl>
-        <dl>
-            <dt><span>引数列</span><span>(argument-list)</span>:</dt>
-            <dd>
-                <span>variable-declaration</span>
-                (<b>,</b> <span>variable-declaration</span>)*
-            </dd>
-        </dl>
-        <dl>
-            <dt><span>文</span><span>(statement)</span>:</dt>
-            <dd><span>expression</span> <b>;</b></dd>
-            <dd><b>return</b> [<span>expression</span>] <b>;</b></dd>
-            <dd><span>変数宣言</span><span>(variable-declaration)</span> <b>;</b></dd>
-            <dd>
-                <b>if</b> <b>(</b> <span>expression</span> <b>)</b>
-                <span>statement</span>
-            </dd>
-            <dd>
-                <b>if</b> <b>(</b> <span>expression</span> <b>)</b>
-                <span>statement</span>
-                <b>else</b> <span>statement</span>
-            </dd>
-            <dd>
-                <b>while</b> <b>(</b> <span>expression</span> <b>)</b>
-                <span>statement</span>
-            </dd>
-            <dd>
-                <b>for</b> <b>(</b> [<span>expression</span>] <b>;</b>
-                [<span>expression</span>] <b>;</b>
-                [<span>expression</span>] <b>)</b>
-                <span>statement</span>
-            </dd>
-            <dd><b>{</b> <span>statement</span>* <b>}</b></dd>
-        </dl>
-        <dl>
-            <dt>式(expression):</dt>
-            <dd>assignment-expression</dd>
-        </dl>
-        <dl>
-            <dt>代入式(assignment-expression):</dt>
-            <dd>comparison-expression [<b>=</b> assignment-expression]</dd>
-        </dl>
-        <dl>
-            <dt>論理式(logical-expression):</dt>
-            <dd>未実装</dd>
-        </dl>
-        <dl>
-            <dt>比較式(comparison-expression):</dt>
-            <dd>a relation ["==" a relation]</dd>
-            <dd>a relation ["!=" a relation]</dd>
-        </dl>
-        <dl>
-            <dt>関係式(relation):</dt>
-            <dd>algebraic-expression ['&gt;' algebraic-expression]</dd>
-            <dd>algebraic-expression ['&lt;' algebraic-expression]</dd>
-            <dd>algebraic-expression ["&gt;=" algebraic-expression]</dd>
-            <dd>algebraic-expression ["&lt;=" algebraic-expression]</dd>
-        </dl>
-        <dl>
-            <dt>代数式(algebraic-expression):</dt>
-            <dd>term ['+' term]</dd>
-            <dd>term ['-' term]</dd>
-        </dl>
-        <dl>
-            <dt>項(term):</dt>
-            <dd>factor ['*' factor]</dd>
-            <dd>factor ['/' factor]</dd>
-        </dl>
-        <dl>
-            <dt>因子(factor):</dt>
-            <dd>['+' | '-'] primary</dd>
-            <dd>['*' | '&amp;'] factor</dd>
-        </dl>
-        <dl>
-            <dt>基本要素(primary):</dt>
-            <dd>'(' expression ')'</dd>
-            <dd>function-name '(' parameter-list ')'</dd>
-            <dd>variable-name</dd>
-            <dd>literal</dd>
-        </dl>
-    </section>
+  <section>
+    <h2><ruby>識別子<rp>(</rp>
+        <rt>Identifiers</rt>
+        <rp>)</rp>
+      </ruby></h2>
+    <p>変数名、関数名、クラス名<sub>&copy;</sub>(variable, function and class<sub>&copy;</sub> name)。
+      文頭は英字および下線(_)、文中は英数字と下線(_)が使える。
+      ただし、重要語を識別子に使うことはできない。</p>
+  </section>
+
+  <section>
+    <h2><ruby>構文<rp>(</rp>
+        <rt>Syntax</rt>
+        <rp>)</rp>
+      </ruby></h2>
+    <div>
+      <h3>構文記述文法</h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>文法</th>
+            <th>書式</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>終端記号</td>
+            <td><b>character</b></td>
+          </tr>
+          <tr>
+            <td>非終端記号</td>
+            <td>variable-name</td>
+          </tr>
+          <tr>
+            <td>並び</td>
+            <td>expression1, expression2</td>
+          </tr>
+          <tr>
+            <td>選択</td>
+            <td>expression1 | expression2</td>
+          </tr>
+          <tr>
+            <td>0個以上</td>
+            <td>expression*</td>
+          </tr>
+          <tr>
+            <td>1個以上</td>
+            <td>expression+</td>
+          </tr>
+          <tr>
+            <td>省略可能</td>
+            <td>[expression]</td>
+          </tr>
+          <tr>
+            <td>グループ化</td>
+            <td>(expression1 expression2)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <h3>変数宣言</h3>
+      <code>storage-class qualifier type indirectly qualifier
+        identifier initializer</code>
+      <dl>
+        <dt>変数宣言(variable-declaration):</dt>
+        <dd>
+          <span>変数宣言指定子</span><span>(variable-declaration-specifier)</span>,
+          <span>変数宣言子</span><span>(variable-declarator)</span>
+        </dd>
+      </dl>
+      <dl>
+        <dt><span>変数宣言指定子</span><span>(variable-declaration-specifier)</span>:</dt>
+        <dd>
+          <span>[<span>記憶領域指定子</span><span>(storage-class-specifier)</span>]<sub>&copy;</sub></span>,
+          <span>[<span>型修飾子</span><span>(type-qualifier)</span>]<sub>&copy;</sub></span>,
+          <span>型指定子</span><span>(type-specifier)</span>
+        </dd>
+      </dl>
+      <details>
+        <summary><span>変数宣言子</span><span>(variable-declarator)</span></summary>
+        <span>[<span>ポインタ・参照指定子</span><span>(pointer/reference-specifier)</span>]</span>,
+        <span>[<span>ポインタ・参照修飾子</span><span>(pointer/reference-qualifier)</span>]<sub>&copy;</sub></span>,
+        <span><span>識別子</span><span>(identifier)</span></span>,
+        <span>[<span>初期化子</span><span>(initializer)</span>]<sub>&copy;</sub></span>
+      </details>
+    </div>
+    <div>
+      <h3>関数宣言</h3>
+      <dl>
+        <dt><span>関数宣言</span><span>(function-declaration)</span>:</dt>
+        <dd>
+          <span>関数宣言指定子</span><span>(function-declaration-specifier)</span>,
+          <span>関数宣言子</span><span>(function-declarator)</span>
+        </dd>
+      </dl>
+      <dl>
+        <dt><span>関数宣言指定子</span><span>(function-declaration-specifier)</span>:</dt>
+        <dd>
+          <span>[<span>フレンド指定子</span><span>(friend-specifier)</span>]<sub>&copy;</sub></span>,
+          <span>[<span>記憶領域指定子</span><span>(storage-class-specifier)</span>]<sub>&copy;</sub></span>,
+          <span>[<span>関数指定子</span><span>(function-specifier)</span>]<sub>&copy;</sub></span>,
+          <span>[<span>[<span>戻り値型修飾子</span><span>(return-type-qualifier)</span>]<sub>&copy;</sub></span>,
+            <span>戻り値型指定子</span><span>(return-type-qualifier)</span>]</span>
+        </dd>
+      </dl>
+      <details>
+        <summary><span>関数宣言子</span><span>(function-declarator)</span></summary>
+        <span>[<span>ポインタ・参照指定子</span><span>(pointer/reference-specifier)</span>]</span>,
+        <span><span>識別子</span><span>(identifier)</span></span>,
+        <b>(</b>,
+        <span>[<span>引数列</span><span>(argument-list)</span>]</span>,
+        <b>)</b>,
+        <span>[<span>関数修飾子</span><span>(function-qualifier)</span>]<sub>&copy;</sub></span>,
+        <span>[<span>例外指定</span><span>(exception-specification)</span>]<sub>&copy;</sub></span>
+      </details>
+    </div>
+    <div>
+      <h3>関数定義</h3>
+      <dl>
+        <dt><span>関数定義</span><span>(function-definition)</span>:</dt>
+        <dd>
+          <span>関数宣言指定子</span><span>(function-declaration-specifier)</span>,
+          <span>関数宣言子</span><span>(function-declarator)</span>,
+          <b>{</b>,
+          <span>関数本体</span><span>(function-body)</span>,
+          <b>}</b>
+        </dd>
+      </dl>
+      <dl>
+        <dt><span>関数本体</span><span>(function-body)</span>:</dt>
+        <dd>
+          <span>statement</span>*
+        </dd>
+      </dl>
+    </div>
+    <dl>
+      <dt><span>型指定子</span><span>(type-specifier)</span>:</dt>
+      <dd>
+        <b>int</b> | <b>char</b><sub>&copy;</sub> | <b>float</b><sub>&copy;</sub> |
+        <b>double</b><sub>&copy;</sub> | <b>bool</b><sub>&copy;</sub> |
+        <span>自定義クラス名</span><span>(user-define-class-name)</span>
+      </dd>
+    </dl>
+    <dl>
+      <dt><span>ポインタ指定子</span><span>(pointer-specifier)</span>:</dt>
+      <dd>
+        <b>*</b>
+      </dd>
+    </dl>
+    <dl>
+      <dt><span>引数列</span><span>(argument-list)</span>:</dt>
+      <dd>
+        <span>variable-declaration</span>
+        (<b>,</b> <span>variable-declaration</span>)*
+      </dd>
+    </dl>
+    <dl>
+      <dt><span>文</span><span>(statement)</span>:</dt>
+      <dd><span>expression</span> <b>;</b></dd>
+      <dd><b>return</b> [<span>expression</span>] <b>;</b></dd>
+      <dd><span>変数宣言</span><span>(variable-declaration)</span> <b>;</b></dd>
+      <dd>
+        <b>if</b> <b>(</b> <span>expression</span> <b>)</b>
+        <span>statement</span>
+      </dd>
+      <dd>
+        <b>if</b> <b>(</b> <span>expression</span> <b>)</b>
+        <span>statement</span>
+        <b>else</b> <span>statement</span>
+      </dd>
+      <dd>
+        <b>while</b> <b>(</b> <span>expression</span> <b>)</b>
+        <span>statement</span>
+      </dd>
+      <dd>
+        <b>for</b> <b>(</b> [<span>expression</span>] <b>;</b>
+        [<span>expression</span>] <b>;</b>
+        [<span>expression</span>] <b>)</b>
+        <span>statement</span>
+      </dd>
+      <dd><b>{</b> <span>statement</span>* <b>}</b></dd>
+    </dl>
+    <dl>
+      <dt>式(expression):</dt>
+      <dd>assignment-expression</dd>
+    </dl>
+    <dl>
+      <dt>代入式(assignment-expression):</dt>
+      <dd>comparison-expression [<b>=</b> assignment-expression]</dd>
+    </dl>
+    <dl>
+      <dt>論理式(logical-expression):</dt>
+      <dd>未実装</dd>
+    </dl>
+    <dl>
+      <dt>比較式(comparison-expression):</dt>
+      <dd>a relation ["==" a relation]</dd>
+      <dd>a relation ["!=" a relation]</dd>
+    </dl>
+    <dl>
+      <dt>関係式(relation):</dt>
+      <dd>algebraic-expression ['&gt;' algebraic-expression]</dd>
+      <dd>algebraic-expression ['&lt;' algebraic-expression]</dd>
+      <dd>algebraic-expression ["&gt;=" algebraic-expression]</dd>
+      <dd>algebraic-expression ["&lt;=" algebraic-expression]</dd>
+    </dl>
+    <dl>
+      <dt>代数式(algebraic-expression):</dt>
+      <dd>term ['+' term]</dd>
+      <dd>term ['-' term]</dd>
+    </dl>
+    <dl>
+      <dt>項(term):</dt>
+      <dd>factor ['*' factor]</dd>
+      <dd>factor ['/' factor]</dd>
+    </dl>
+    <dl>
+      <dt>因子(factor):</dt>
+      <dd>['+' | '-'] primary</dd>
+      <dd>['*' | '&amp;'] factor</dd>
+    </dl>
+    <dl>
+      <dt>基本要素(primary):</dt>
+      <dd>'(' expression ')'</dd>
+      <dd>function-name '(' parameter-list ')'</dd>
+      <dd>variable-name</dd>
+      <dd>literal</dd>
+    </dl>
+  </section>
 </body>
 
 </html>
