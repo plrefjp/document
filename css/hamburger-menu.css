@@ -16,9 +16,9 @@
   background-color: var(--bg-color);
 }
 
-.menu-btn span,
-span:before,
-span:after {
+.menu-btn #bar,
+#bar:before,
+#bar:after {
   content: '';
   display: block;
   height: 3px;
@@ -29,11 +29,11 @@ span:after {
   transition: all 0.4s;
 }
 
-.menu-btn span:before {
+.menu-btn #bar:before {
   bottom: 8px;
 }
 
-.menu-btn span:after {
+.menu-btn #bar:after {
   top: 8px;
 }
 
@@ -114,16 +114,4 @@ span:after {
 #menu-btn-check:checked~.menu-content {
   right: 0;
   /*メニューを画面内へ*/
-}
-
-body {
-  background-color: #000;
-  color: var(--text-color);
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: #000000;
-    color: var(--text-color);
-  }
 }

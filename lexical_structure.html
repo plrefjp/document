@@ -5,35 +5,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>字句構造(Lexical structure)</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="lexical_structure.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/lexical_structure.css">
 </head>
 
 <body>
+  
+  <script>
+    fetch("header.html")
+      .then((response) => response.text())
+      .then((data) => document.querySelector("body").insertAdjacentHTML('afterbegin', data));
+  </script>
+  
   <header>
     <h1><ruby>字句構造<rp>(</rp>
         <rt>Lexical structure</rt>
         <rp>)</rp>
       </ruby></h1>
-    <div class="hamburger-menu">
-      <input type="checkbox" id="menu-btn-check">
-      <label for="menu-btn-check" class="menu-btn"><span></span></label>
-      <!--ここからメニュー-->
-      <div class="menu-content">
-        <ul>
-          <li>
-            <a href="index.html">ホーム</a>
-          </li>
-          <li>
-            <a href="lexical_structure.html">字句構造</a>
-          </li>
-          <li>
-            <a href="#">メニューリンク3</a>
-          </li>
-        </ul>
-      </div>
-      <!--ここまでメニュー-->
-    </div>
   </header>
 
   <p>&copy;は未実装の機能</p>

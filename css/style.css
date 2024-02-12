@@ -1,0 +1,13 @@
+/*@import url("hamburger-menu.css");*/
+
+body {
+  background-color: #000000;
+  color: var(--text-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #000000;
+    color: var(--text-color);
+  }
+}
