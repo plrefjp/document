@@ -1,5 +1,5 @@
 :root {
-  --bg-color: #661111;
+  --bg-color: #111111;
   --text-color: #bbbbbb;
 }
 
@@ -13,7 +13,7 @@
   justify-content: center;
   align-items: center;
   z-index: 90;
-  background-color: #661111;
+  background-color: var(--bg-color);
 }
 
 .menu-btn span,
@@ -117,7 +117,7 @@ span:after {
 }
 
 body {
-  background-color: #000000;
+  background-color: #fff;
   color: var(--text-color);
 }
 
