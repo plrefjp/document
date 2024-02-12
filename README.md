@@ -1,5 +1,5 @@
 # reference
-my cc reference site
+programming languages reference
 
 hamburger menu from
 <https://www.asobou.co.jp/blog/web/css-menu>
