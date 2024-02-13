@@ -5,39 +5,10 @@
   <title>document</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <header>
-    <div class="hamburger-menu">
-      <div class="menu-container">
-        <input type="checkbox" id="menu-btn-check">
-        <label for="menu-btn-check" class="menu-btn"><span></span></label>
-        <!--ここからメニュー-->
-        <div class="menu-content">
-          <ul>
-            <li>
-              <a href="index.html">ホーム</a>
-            </li>
-            <li>
-              <a href="lexical_structure.html">字句構造</a>
-            </li>
-            <li>
-              <a href="README.md">README</a>
-            </li>
-          </ul>
-        </div>
-        <!--ここまでメニュー-->
-      </div>
-    </div>
-  </header>
-
-  <div class="container">
-    <div class="object">
-      <div class="child"></div>
-    </div>
-  </div>
 
   <p title="資料">リファレンス
     reference</p>
@@ -49,4 +20,15 @@
   <br><br><br><br><br><br><br><br><br>
   <br><br><br><br><br><br><br><br><br>
   <p>foot</p>
+
+
+  <script>
+    fetch("header.html")
+      .then((response) => response.text())
+      .then((data) => document.querySelector("body").insertAdjacentHTML('afterbegin', data));
+    fetch("footer.html")
+      .then((response) => response.text())
+      .then((data) => document.querySelector("body").insertAdjacentHTML('beforeend', data));
+  </script>
+
 </body>
