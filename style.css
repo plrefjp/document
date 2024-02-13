@@ -116,11 +116,6 @@ span:after {
   /*メニューを画面内へ*/
 }
 
-body {
-  background-color: #fff;
-  color: var(--text-color);
-}
-
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #000000;
