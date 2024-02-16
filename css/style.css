@@ -1,6 +1,7 @@
 /*@import url("hamburger-menu.css");*/
 
 body {
+  width: 100vw;
   background-color: #000000;
   color: var(--text-color);
 }
